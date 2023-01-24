@@ -25,6 +25,10 @@ indent_size = 4
 [*.rs]
 indent_size = 4
 
+# kotlin
+[*.{kt,kts}]
+indent_size = 4
+
 # documentation, utils
 [*.{md,mdx,diff}]
 trim_trailing_whitespace = false
