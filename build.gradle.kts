@@ -50,7 +50,15 @@ kotlin {
 
     sourceSets {
         val commonMain by getting
+
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test-junit"))
+            }
+        }
+
         val jvmMain by getting
+
         val jsMain by getting
     }
 

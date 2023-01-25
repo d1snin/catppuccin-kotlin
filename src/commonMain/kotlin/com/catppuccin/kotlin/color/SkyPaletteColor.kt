@@ -23,7 +23,7 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValues
+import com.catppuccin.kotlin.ColorValue
 import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.sky
 import com.catppuccin.kotlin.util.whenPalette
@@ -31,9 +31,9 @@ import com.catppuccin.kotlin.util.whenPalette
 public class SkyPaletteColor(palette: Palette) : PaletteColor(sky, palette) {
 
     override val color = whenPalette(
-        latte = Color(ColorValues.SKY_LATTE_HEX),
-        frappe = Color(ColorValues.SKY_FRAPPE_HEX),
-        macchiato = Color(ColorValues.SKY_MACCHIATO_HEX),
-        mocha = Color(ColorValues.SKY_MOCHA_HEX)
+        latte = Color(ColorValue.SKY_LATTE_HEX),
+        frappe = Color(ColorValue.SKY_FRAPPE_HEX),
+        macchiato = Color(ColorValue.SKY_MACCHIATO_HEX),
+        mocha = Color(ColorValue.SKY_MOCHA_HEX)
     )
 }

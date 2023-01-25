@@ -23,7 +23,7 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValues
+import com.catppuccin.kotlin.ColorValue
 import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.lavender
 import com.catppuccin.kotlin.util.whenPalette
@@ -31,9 +31,9 @@ import com.catppuccin.kotlin.util.whenPalette
 public class LavenderPaletteColor(palette: Palette) : PaletteColor(lavender, palette) {
 
     override val color = whenPalette(
-        latte = Color(ColorValues.LAVENDER_LATTE_HEX),
-        frappe = Color(ColorValues.LAVENDER_FRAPPE_HEX),
-        macchiato = Color(ColorValues.LAVENDER_MACCHIATO_HEX),
-        mocha = Color(ColorValues.LAVENDER_MOCHA_HEX)
+        latte = Color(ColorValue.LAVENDER_LATTE_HEX),
+        frappe = Color(ColorValue.LAVENDER_FRAPPE_HEX),
+        macchiato = Color(ColorValue.LAVENDER_MACCHIATO_HEX),
+        mocha = Color(ColorValue.LAVENDER_MOCHA_HEX)
     )
 }

@@ -24,57 +24,57 @@ package com.catppuccin.kotlin
 
 import com.catppuccin.kotlin.color.*
 
-public val rosewater: ColorDefinition = ColorDefinition(ColorValues.ROSEWATER_LABEL, ::RosewaterPaletteColor)
+public val rosewater: ColorDefinition = ColorDefinition(ColorValue.ROSEWATER_LABEL, ::RosewaterPaletteColor)
 
-public val flamingo: ColorDefinition = ColorDefinition(ColorValues.FLAMINGO_LABEL, ::FlamingoPaletteColor)
+public val flamingo: ColorDefinition = ColorDefinition(ColorValue.FLAMINGO_LABEL, ::FlamingoPaletteColor)
 
-public val pink: ColorDefinition = ColorDefinition(ColorValues.PINK_LABEL, ::PinkPaletteColor)
+public val pink: ColorDefinition = ColorDefinition(ColorValue.PINK_LABEL, ::PinkPaletteColor)
 
-public val mauve: ColorDefinition = ColorDefinition(ColorValues.MAUVE_LABEL, ::MauvePaletteColor)
+public val mauve: ColorDefinition = ColorDefinition(ColorValue.MAUVE_LABEL, ::MauvePaletteColor)
 
-public val red: ColorDefinition = ColorDefinition(ColorValues.RED_LABEL, ::RedPaletteColor)
+public val red: ColorDefinition = ColorDefinition(ColorValue.RED_LABEL, ::RedPaletteColor)
 
-public val maroon: ColorDefinition = ColorDefinition(ColorValues.MAROON_LABEL, ::MaroonPaletteColor)
+public val maroon: ColorDefinition = ColorDefinition(ColorValue.MAROON_LABEL, ::MaroonPaletteColor)
 
-public val peach: ColorDefinition = ColorDefinition(ColorValues.PEACH_LABEL, ::PeachPaletteColor)
+public val peach: ColorDefinition = ColorDefinition(ColorValue.PEACH_LABEL, ::PeachPaletteColor)
 
-public val yellow: ColorDefinition = ColorDefinition(ColorValues.YELLOW_LABEL, ::YellowPaletteColor)
+public val yellow: ColorDefinition = ColorDefinition(ColorValue.YELLOW_LABEL, ::YellowPaletteColor)
 
-public val green: ColorDefinition = ColorDefinition(ColorValues.GREEN_LABEL, ::GreenPaletteColor)
+public val green: ColorDefinition = ColorDefinition(ColorValue.GREEN_LABEL, ::GreenPaletteColor)
 
-public val teal: ColorDefinition = ColorDefinition(ColorValues.TEAL_LABEL, ::TealPaletteColor)
+public val teal: ColorDefinition = ColorDefinition(ColorValue.TEAL_LABEL, ::TealPaletteColor)
 
-public val sky: ColorDefinition = ColorDefinition(ColorValues.SKY_LABEL, ::SkyPaletteColor)
+public val sky: ColorDefinition = ColorDefinition(ColorValue.SKY_LABEL, ::SkyPaletteColor)
 
-public val sapphire: ColorDefinition = ColorDefinition(ColorValues.SAPPHIRE_LABEL, ::SapphirePaletteColor)
+public val sapphire: ColorDefinition = ColorDefinition(ColorValue.SAPPHIRE_LABEL, ::SapphirePaletteColor)
 
-public val blue: ColorDefinition = ColorDefinition(ColorValues.BLUE_LABEL, ::BluePaletteColor)
+public val blue: ColorDefinition = ColorDefinition(ColorValue.BLUE_LABEL, ::BluePaletteColor)
 
-public val lavender: ColorDefinition = ColorDefinition(ColorValues.LAVENDER_LABEL, ::LavenderPaletteColor)
+public val lavender: ColorDefinition = ColorDefinition(ColorValue.LAVENDER_LABEL, ::LavenderPaletteColor)
 
-public val text: ColorDefinition = ColorDefinition(ColorValues.TEXT_LABEL, ::TextPaletteColor)
+public val text: ColorDefinition = ColorDefinition(ColorValue.TEXT_LABEL, ::TextPaletteColor)
 
-public val subtext0: ColorDefinition = ColorDefinition(ColorValues.SUBTEXT0_LABEL, ::Subtext0PaletteColor)
+public val subtext0: ColorDefinition = ColorDefinition(ColorValue.SUBTEXT0_LABEL, ::Subtext0PaletteColor)
 
-public val subtext1: ColorDefinition = ColorDefinition(ColorValues.SUBTEXT1_LABEL, ::Subtext1PaletteColor)
+public val subtext1: ColorDefinition = ColorDefinition(ColorValue.SUBTEXT1_LABEL, ::Subtext1PaletteColor)
 
-public val overlay0: ColorDefinition = ColorDefinition(ColorValues.OVERLAY0_LABEL, ::Overlay0PaletteColor)
+public val overlay0: ColorDefinition = ColorDefinition(ColorValue.OVERLAY0_LABEL, ::Overlay0PaletteColor)
 
-public val overlay1: ColorDefinition = ColorDefinition(ColorValues.OVERLAY1_LABEL, ::Overlay1PaletteColor)
+public val overlay1: ColorDefinition = ColorDefinition(ColorValue.OVERLAY1_LABEL, ::Overlay1PaletteColor)
 
-public val overlay2: ColorDefinition = ColorDefinition(ColorValues.OVERLAY2_LABEL, ::Overlay2PaletteColor)
+public val overlay2: ColorDefinition = ColorDefinition(ColorValue.OVERLAY2_LABEL, ::Overlay2PaletteColor)
 
-public val surface0: ColorDefinition = ColorDefinition(ColorValues.SURFACE0_LABEL, ::Surface0PaletteColor)
+public val surface0: ColorDefinition = ColorDefinition(ColorValue.SURFACE0_LABEL, ::Surface0PaletteColor)
 
-public val surface1: ColorDefinition = ColorDefinition(ColorValues.SURFACE1_LABEL, ::Surface1PaletteColor)
+public val surface1: ColorDefinition = ColorDefinition(ColorValue.SURFACE1_LABEL, ::Surface1PaletteColor)
 
-public val surface2: ColorDefinition = ColorDefinition(ColorValues.SURFACE2_LABEL, ::Surface2PaletteColor)
+public val surface2: ColorDefinition = ColorDefinition(ColorValue.SURFACE2_LABEL, ::Surface2PaletteColor)
 
-public val base: ColorDefinition = ColorDefinition(ColorValues.BASE_LABEL, ::BasePaletteColor)
+public val base: ColorDefinition = ColorDefinition(ColorValue.BASE_LABEL, ::BasePaletteColor)
 
-public val mantle: ColorDefinition = ColorDefinition(ColorValues.MANTLE_LABEL, ::MantlePaletteColor)
+public val mantle: ColorDefinition = ColorDefinition(ColorValue.MANTLE_LABEL, ::MantlePaletteColor)
 
-public val crust: ColorDefinition = ColorDefinition(ColorValues.CRUST_LABEL, ::CrustPaletteColor)
+public val crust: ColorDefinition = ColorDefinition(ColorValue.CRUST_LABEL, ::CrustPaletteColor)
 
 public val allColors: List<ColorDefinition> = listOf(
     rosewater,

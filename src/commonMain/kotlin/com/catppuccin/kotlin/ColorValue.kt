@@ -22,7 +22,7 @@
 
 package com.catppuccin.kotlin
 
-internal object ColorValues {
+internal object ColorValue {
 
     internal const val ROSEWATER_LABEL = "Rosewater"
     internal const val ROSEWATER_LATTE_HEX = 0xdc8a78

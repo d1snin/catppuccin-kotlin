@@ -23,7 +23,7 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValues
+import com.catppuccin.kotlin.ColorValue
 import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.flamingo
 import com.catppuccin.kotlin.util.whenPalette
@@ -31,9 +31,9 @@ import com.catppuccin.kotlin.util.whenPalette
 public class FlamingoPaletteColor(palette: Palette) : PaletteColor(flamingo, palette) {
 
     override val color = whenPalette(
-        latte = Color(ColorValues.FLAMINGO_LATTE_HEX),
-        frappe = Color(ColorValues.FLAMINGO_FRAPPE_HEX),
-        macchiato = Color(ColorValues.FLAMINGO_MACCHIATO_HEX),
-        mocha = Color(ColorValues.FLAMINGO_MOCHA_HEX)
+        latte = Color(ColorValue.FLAMINGO_LATTE_HEX),
+        frappe = Color(ColorValue.FLAMINGO_FRAPPE_HEX),
+        macchiato = Color(ColorValue.FLAMINGO_MACCHIATO_HEX),
+        mocha = Color(ColorValue.FLAMINGO_MOCHA_HEX)
     )
 }

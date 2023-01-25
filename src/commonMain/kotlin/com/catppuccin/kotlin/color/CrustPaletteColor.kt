@@ -23,7 +23,7 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValues
+import com.catppuccin.kotlin.ColorValue
 import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.crust
 import com.catppuccin.kotlin.util.whenPalette
@@ -31,9 +31,9 @@ import com.catppuccin.kotlin.util.whenPalette
 public class CrustPaletteColor(palette: Palette) : PaletteColor(crust, palette) {
 
     override val color = whenPalette(
-        latte = Color(ColorValues.CRUST_LATTE_HEX),
-        frappe = Color(ColorValues.CRUST_FRAPPE_HEX),
-        macchiato = Color(ColorValues.CRUST_MACCHIATO_HEX),
-        mocha = Color(ColorValues.CRUST_MOCHA_HEX)
+        latte = Color(ColorValue.CRUST_LATTE_HEX),
+        frappe = Color(ColorValue.CRUST_FRAPPE_HEX),
+        macchiato = Color(ColorValue.CRUST_MACCHIATO_HEX),
+        mocha = Color(ColorValue.CRUST_MOCHA_HEX)
     )
 }

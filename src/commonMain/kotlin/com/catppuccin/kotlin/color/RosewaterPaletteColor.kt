@@ -23,7 +23,7 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValues
+import com.catppuccin.kotlin.ColorValue
 import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.rosewater
 import com.catppuccin.kotlin.util.whenPalette
@@ -31,9 +31,9 @@ import com.catppuccin.kotlin.util.whenPalette
 public class RosewaterPaletteColor(palette: Palette) : PaletteColor(rosewater, palette) {
 
     override val color = whenPalette(
-        latte = Color(ColorValues.ROSEWATER_LATTE_HEX),
-        frappe = Color(ColorValues.ROSEWATER_FRAPPE_HEX),
-        macchiato = Color(ColorValues.ROSEWATER_MACCHIATO_HEX),
-        mocha = Color(ColorValues.ROSEWATER_MOCHA_HEX)
+        latte = Color(ColorValue.ROSEWATER_LATTE_HEX),
+        frappe = Color(ColorValue.ROSEWATER_FRAPPE_HEX),
+        macchiato = Color(ColorValue.ROSEWATER_MACCHIATO_HEX),
+        mocha = Color(ColorValue.ROSEWATER_MOCHA_HEX)
     )
 }

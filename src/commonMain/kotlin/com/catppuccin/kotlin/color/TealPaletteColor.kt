@@ -23,7 +23,7 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValues
+import com.catppuccin.kotlin.ColorValue
 import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.teal
 import com.catppuccin.kotlin.util.whenPalette
@@ -31,9 +31,9 @@ import com.catppuccin.kotlin.util.whenPalette
 public class TealPaletteColor(palette: Palette) : PaletteColor(teal, palette) {
 
     override val color = whenPalette(
-        latte = Color(ColorValues.TEAL_LATTE_HEX),
-        frappe = Color(ColorValues.TEAL_FRAPPE_HEX),
-        macchiato = Color(ColorValues.TEAL_MACCHIATO_HEX),
-        mocha = Color(ColorValues.TEAL_MOCHA_HEX)
+        latte = Color(ColorValue.TEAL_LATTE_HEX),
+        frappe = Color(ColorValue.TEAL_FRAPPE_HEX),
+        macchiato = Color(ColorValue.TEAL_MACCHIATO_HEX),
+        mocha = Color(ColorValue.TEAL_MOCHA_HEX)
     )
 }

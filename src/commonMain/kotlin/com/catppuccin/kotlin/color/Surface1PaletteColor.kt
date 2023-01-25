@@ -23,7 +23,7 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValues
+import com.catppuccin.kotlin.ColorValue
 import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.surface1
 import com.catppuccin.kotlin.util.whenPalette
@@ -31,9 +31,9 @@ import com.catppuccin.kotlin.util.whenPalette
 public class Surface1PaletteColor(palette: Palette) : PaletteColor(surface1, palette) {
 
     override val color = whenPalette(
-        latte = Color(ColorValues.SURFACE1_LATTE_HEX),
-        frappe = Color(ColorValues.SURFACE1_FRAPPE_HEX),
-        macchiato = Color(ColorValues.SURFACE1_MACCHIATO_HEX),
-        mocha = Color(ColorValues.SURFACE1_MOCHA_HEX)
+        latte = Color(ColorValue.SURFACE1_LATTE_HEX),
+        frappe = Color(ColorValue.SURFACE1_FRAPPE_HEX),
+        macchiato = Color(ColorValue.SURFACE1_MACCHIATO_HEX),
+        mocha = Color(ColorValue.SURFACE1_MOCHA_HEX)
     )
 }
