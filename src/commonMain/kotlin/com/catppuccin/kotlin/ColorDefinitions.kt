@@ -106,3 +106,7 @@ public val allColors: ColorDefinitions = listOf(
     mantle,
     crust
 )
+
+public fun colors(definitions: ColorDefinitions): ColorDefinitions = definitions
+
+public fun colors(vararg definitions: ColorDefinition): ColorDefinitions = definitions.asIterable()
