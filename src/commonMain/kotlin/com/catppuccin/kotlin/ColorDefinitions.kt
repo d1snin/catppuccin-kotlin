@@ -24,6 +24,8 @@ package com.catppuccin.kotlin
 
 import com.catppuccin.kotlin.color.*
 
+public typealias ColorDefinitions = Iterable<ColorDefinition>
+
 public val rosewater: ColorDefinition = ColorDefinition(ColorValue.ROSEWATER_LABEL, ::RosewaterPaletteColor)
 
 public val flamingo: ColorDefinition = ColorDefinition(ColorValue.FLAMINGO_LABEL, ::FlamingoPaletteColor)
@@ -76,7 +78,7 @@ public val mantle: ColorDefinition = ColorDefinition(ColorValue.MANTLE_LABEL, ::
 
 public val crust: ColorDefinition = ColorDefinition(ColorValue.CRUST_LABEL, ::CrustPaletteColor)
 
-public val allColors: List<ColorDefinition> = listOf(
+public val allColors: ColorDefinitions = listOf(
     rosewater,
     flamingo,
     pink,
