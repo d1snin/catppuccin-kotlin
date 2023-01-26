@@ -23,21 +23,25 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.ColorDefinition
+import com.catppuccin.kotlin.ColorDefinitions
 import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.allColors
 
 public fun paletteColorOf(definition: ColorDefinition, palette: Palette): PaletteColor =
     definition.paletteColorCreator(palette)
 
-public fun paletteColorsOf(definitions: Iterable<ColorDefinition>, palette: Palette): List<PaletteColor> =
+public fun paletteColorsOf(definitions: ColorDefinitions, palette: Palette): PaletteColors =
     definitions.map {
         paletteColorOf(it, palette)
     }
 
+public fun paletteColorsOf(vararg definitions: ColorDefinition, palette: Palette): PaletteColors =
+    paletteColorsOf(definitions.asIterable(), palette)
+
 public infix fun ColorDefinition.of(palette: Palette): PaletteColor =
     paletteColorOf(this, palette)
 
-public infix fun Iterable<ColorDefinition>.of(palette: Palette): List<PaletteColor> =
+public infix fun ColorDefinitions.of(palette: Palette): PaletteColors =
     paletteColorsOf(this, palette)
 
 public val Palette.rosewater: PaletteColor get() = RosewaterPaletteColor(this)
@@ -92,4 +96,4 @@ public val Palette.mantle: PaletteColor get() = MantlePaletteColor(this)
 
 public val Palette.crust: PaletteColor get() = CrustPaletteColor(this)
 
-public val Palette.colors: List<PaletteColor> get() = paletteColorsOf(allColors, this)
+public val Palette.colors: PaletteColors get() = paletteColorsOf(allColors, this)
