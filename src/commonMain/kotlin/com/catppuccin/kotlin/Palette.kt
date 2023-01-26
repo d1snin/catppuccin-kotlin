@@ -25,19 +25,19 @@ package com.catppuccin.kotlin
 public sealed class Palette(
     public val name: String,
 ) {
-    public object Latte : Palette(LATTE_PALETTE_NAME)
+    public object Latte : Palette(LATTE_NAME)
 
-    public object Frappe : Palette(FRAPPE_PALETTE_NAME)
+    public object Frappe : Palette(FRAPPE_NAME)
 
-    public object Macchiato : Palette(MACCHIATO_PALETTE_NAME)
+    public object Macchiato : Palette(MACCHIATO_NAME)
 
-    public object Mocha : Palette(MOCHA_PALETTE_NAME)
+    public object Mocha : Palette(MOCHA_NAME)
 
-    private companion object {
+    internal companion object {
 
-        private const val LATTE_PALETTE_NAME = "Latte"
-        private const val FRAPPE_PALETTE_NAME = "Frappé"
-        private const val MACCHIATO_PALETTE_NAME = "Macchiato"
-        private const val MOCHA_PALETTE_NAME = "Mocha"
+        internal const val LATTE_NAME = "Latte"
+        internal const val FRAPPE_NAME = "Frappé"
+        internal const val MACCHIATO_NAME = "Macchiato"
+        internal const val MOCHA_NAME = "Mocha"
     }
 }
