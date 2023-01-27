@@ -25,4 +25,4 @@ package com.catppuccin.kotlin
 public typealias Hex = Int
 
 public val Hex.formatted: String get() = toULong().toString(16)
-public val Hex.formattedWithHash: String get() = "#$formatted"
+public val Hex.formattedWithHashPrefix: String get() = "#$formatted"

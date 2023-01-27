@@ -38,6 +38,6 @@ class HexTest {
 
     @Test
     fun mustFormatHexValueWithHash() {
-        assertEquals("#$hexString", hex.formattedWithHash)
+        assertEquals("#$hexString", hex.formattedWithHashPrefix)
     }
 }
