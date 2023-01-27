@@ -22,13 +22,12 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValue
-import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.teal
+import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public class TealPaletteColor(palette: Palette) : PaletteColor(teal, palette) {
+public data class TealPaletteColor(override val palette: Palette) : PaletteColor() {
+
+    override val definition: ColorDefinition = teal
 
     override val color = whenPalette(
         latte = Color(ColorValue.TEAL_LATTE_HEX),

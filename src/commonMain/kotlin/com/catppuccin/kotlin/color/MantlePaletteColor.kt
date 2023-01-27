@@ -22,13 +22,12 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValue
-import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.mantle
+import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public class MantlePaletteColor(palette: Palette) : PaletteColor(mantle, palette) {
+public data class MantlePaletteColor(override val palette: Palette) : PaletteColor() {
+
+    override val definition: ColorDefinition = mantle
 
     override val color = whenPalette(
         latte = Color(ColorValue.MANTLE_LATTE_HEX),

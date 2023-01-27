@@ -22,13 +22,12 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValue
-import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.overlay1
+import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public class Overlay1PaletteColor(palette: Palette) : PaletteColor(overlay1, palette) {
+public data class Overlay1PaletteColor(override val palette: Palette) : PaletteColor() {
+
+    override val definition: ColorDefinition = overlay1
 
     override val color = whenPalette(
         latte = Color(ColorValue.OVERLAY1_LATTE_HEX),

@@ -22,6 +22,8 @@
 
 plugins {
     kotlin("multiplatform")
+    id("org.jetbrains.kotlinx.kover")
+    id("com.github.ben-manes.versions")
 }
 
 val projectGroup: String by project
@@ -44,7 +46,14 @@ kotlin {
     }
 
     js {
-        browser()
+        browser {
+            testTask {
+                useKarma {
+                    useFirefox()
+                }
+            }
+        }
+
         nodejs()
     }
 

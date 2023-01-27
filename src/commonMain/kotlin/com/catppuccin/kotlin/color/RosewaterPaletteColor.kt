@@ -22,13 +22,12 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValue
-import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.rosewater
+import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public class RosewaterPaletteColor(palette: Palette) : PaletteColor(rosewater, palette) {
+public data class RosewaterPaletteColor(override val palette: Palette) : PaletteColor() {
+
+    override val definition: ColorDefinition = rosewater
 
     override val color = whenPalette(
         latte = Color(ColorValue.ROSEWATER_LATTE_HEX),

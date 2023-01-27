@@ -22,13 +22,12 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValue
-import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.surface1
+import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public class Surface1PaletteColor(palette: Palette) : PaletteColor(surface1, palette) {
+public data class Surface1PaletteColor(override val palette: Palette) : PaletteColor() {
+
+    override val definition: ColorDefinition = surface1
 
     override val color = whenPalette(
         latte = Color(ColorValue.SURFACE1_LATTE_HEX),

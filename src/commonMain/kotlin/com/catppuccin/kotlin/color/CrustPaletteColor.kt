@@ -22,13 +22,12 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValue
-import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.crust
+import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public class CrustPaletteColor(palette: Palette) : PaletteColor(crust, palette) {
+public data class CrustPaletteColor(override val palette: Palette) : PaletteColor() {
+
+    override val definition: ColorDefinition = crust
 
     override val color = whenPalette(
         latte = Color(ColorValue.CRUST_LATTE_HEX),

@@ -27,10 +27,12 @@ import com.catppuccin.kotlin.ColorDefinition
 import com.catppuccin.kotlin.Hex
 import com.catppuccin.kotlin.Palette
 
-public sealed class PaletteColor(
-    public val definition: ColorDefinition,
-    public val palette: Palette
-) {
+public sealed class PaletteColor {
+
+    public abstract val definition: ColorDefinition
+
+    public abstract val palette: Palette
+
     internal abstract val color: Color
 
     public val hex: Hex get() = color.hex

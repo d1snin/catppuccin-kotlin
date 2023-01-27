@@ -22,13 +22,12 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValue
-import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.flamingo
+import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public class FlamingoPaletteColor(palette: Palette) : PaletteColor(flamingo, palette) {
+public data class FlamingoPaletteColor(override val palette: Palette) : PaletteColor() {
+
+    override val definition: ColorDefinition = flamingo
 
     override val color = whenPalette(
         latte = Color(ColorValue.FLAMINGO_LATTE_HEX),

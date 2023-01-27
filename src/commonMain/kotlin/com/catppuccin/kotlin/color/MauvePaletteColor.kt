@@ -22,13 +22,12 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
-import com.catppuccin.kotlin.ColorValue
-import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.mauve
+import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public class MauvePaletteColor(palette: Palette) : PaletteColor(mauve, palette) {
+public data class MauvePaletteColor(override val palette: Palette) : PaletteColor() {
+
+    override val definition: ColorDefinition = mauve
 
     override val color = whenPalette(
         latte = Color(ColorValue.MAUVE_LATTE_HEX),
