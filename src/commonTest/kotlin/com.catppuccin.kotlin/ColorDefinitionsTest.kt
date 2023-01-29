@@ -246,12 +246,12 @@ class ColorDefinitionsTest {
     }
 
     @Test
-    fun colorsShouldReturnTheProvidedColorsWithoutChanges() {
+    fun colorsMustReturnTheProvidedColorsWithoutChanges() {
         assertContentEquals(listOf(rosewater, flamingo), colors(listOf(rosewater, flamingo)))
     }
 
     @Test
-    fun colorsWithVarargShouldReturnTheProvidedColorsWithoutChanges() {
+    fun colorsWithVarargMustReturnTheProvidedColorsWithoutChanges() {
         assertContentEquals(listOf(rosewater, flamingo), colors(rosewater, flamingo))
     }
 }

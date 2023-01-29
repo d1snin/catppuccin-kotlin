@@ -31,7 +31,7 @@ class PaletteColorTest {
     private val mockPaletteColor = RosewaterPaletteColor(Palette.Latte)
 
     @Test
-    fun shouldReturnValidColorHexValue() {
+    fun mustReturnValidColorHexValue() {
         assertEquals(mockPaletteColor.color.hex, mockPaletteColor.hex)
     }
 }
