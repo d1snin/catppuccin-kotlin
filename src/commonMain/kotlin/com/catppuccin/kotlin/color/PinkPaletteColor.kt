@@ -33,6 +33,6 @@ public data class PinkPaletteColor(override val palette: Palette) : PaletteColor
         latte = ColorValue.PINK_LATTE_HEX,
         frappe = ColorValue.PINK_FRAPPE_HEX,
         macchiato = ColorValue.PINK_MACCHIATO_HEX,
-        mocha = ColorValue.BASE_MOCHA_HEX
+        mocha = ColorValue.PINK_MOCHA_HEX
     )
 )

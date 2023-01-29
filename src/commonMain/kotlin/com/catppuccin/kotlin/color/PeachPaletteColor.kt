@@ -33,6 +33,6 @@ public data class PeachPaletteColor(override val palette: Palette) : PaletteColo
         latte = ColorValue.PEACH_LATTE_HEX,
         frappe = ColorValue.PEACH_FRAPPE_HEX,
         macchiato = ColorValue.PEACH_MACCHIATO_HEX,
-        mocha = ColorValue.BASE_MOCHA_HEX
+        mocha = ColorValue.PEACH_MOCHA_HEX
     )
 )
