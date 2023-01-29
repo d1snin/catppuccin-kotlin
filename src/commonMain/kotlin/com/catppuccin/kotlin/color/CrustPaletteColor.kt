@@ -22,17 +22,17 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.*
+import com.catppuccin.kotlin.ColorValue
+import com.catppuccin.kotlin.Palette
+import com.catppuccin.kotlin.crust
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class CrustPaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = crust
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.CRUST_LATTE_HEX),
-        frappe = Color(ColorValue.CRUST_FRAPPE_HEX),
-        macchiato = Color(ColorValue.CRUST_MACCHIATO_HEX),
-        mocha = Color(ColorValue.CRUST_MOCHA_HEX)
+public data class CrustPaletteColor(override val palette: Palette) : PaletteColor(
+    definition = crust,
+    color = palette.whenPalette(
+        latte = ColorValue.CRUST_LATTE_HEX,
+        frappe = ColorValue.CRUST_FRAPPE_HEX,
+        macchiato = ColorValue.CRUST_MACCHIATO_HEX,
+        mocha = ColorValue.CRUST_MOCHA_HEX
     )
-}
+)

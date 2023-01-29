@@ -22,6 +22,15 @@
 
 package com.catppuccin.kotlin
 
-internal data class Color(
-    val hex: Hex
-)
+internal data class Color(override val hex: Hex) : ColorValueContainer {
+
+    private val hexString = hex.formatted
+
+    override val rgb: Rgb = Rgb(
+        red = substringColorChannel(0..1),
+        green = substringColorChannel(2..3),
+        blue = substringColorChannel(4..5),
+    )
+
+    private fun substringColorChannel(range: IntRange) = hexString.substring(range).toInt(16)
+}

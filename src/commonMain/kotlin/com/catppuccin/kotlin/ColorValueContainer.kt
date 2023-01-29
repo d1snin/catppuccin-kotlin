@@ -20,17 +20,17 @@
  * SOFTWARE.
  */
 
-package com.catppuccin.kotlin.color
+package com.catppuccin.kotlin
 
-import com.catppuccin.kotlin.*
-import com.catppuccin.kotlin.util.whenPalette
+/**
+ * Holds color value in different formats.
+ *
+ * @see hex
+ * @see rgb
+ */
+public interface ColorValueContainer {
 
-public data class SapphirePaletteColor(override val palette: Palette) : PaletteColor(
-    definition = sapphire,
-    color = palette.whenPalette(
-        latte = ColorValue.SAPPHIRE_LATTE_HEX,
-        frappe = ColorValue.SAPPHIRE_FRAPPE_HEX,
-        macchiato = ColorValue.SAPPHIRE_MACCHIATO_HEX,
-        mocha = ColorValue.SAPPHIRE_MOCHA_HEX
-    )
-)
+    public val hex: Hex
+
+    public val rgb: Rgb
+}

@@ -25,14 +25,12 @@ package com.catppuccin.kotlin.color
 import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class Surface2PaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = surface2
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.SURFACE2_LATTE_HEX),
-        frappe = Color(ColorValue.SURFACE2_FRAPPE_HEX),
-        macchiato = Color(ColorValue.SURFACE2_MACCHIATO_HEX),
-        mocha = Color(ColorValue.SURFACE2_MOCHA_HEX)
+public data class Surface2PaletteColor(override val palette: Palette) : PaletteColor(
+    definition = surface2,
+    color = palette.whenPalette(
+        latte = ColorValue.SURFACE2_LATTE_HEX,
+        frappe = ColorValue.SURFACE2_FRAPPE_HEX,
+        macchiato = ColorValue.SURFACE2_MACCHIATO_HEX,
+        mocha = ColorValue.SURFACE2_MOCHA_HEX
     )
-}
+)

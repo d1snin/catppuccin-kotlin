@@ -25,14 +25,12 @@ package com.catppuccin.kotlin.color
 import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class FlamingoPaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = flamingo
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.FLAMINGO_LATTE_HEX),
-        frappe = Color(ColorValue.FLAMINGO_FRAPPE_HEX),
-        macchiato = Color(ColorValue.FLAMINGO_MACCHIATO_HEX),
-        mocha = Color(ColorValue.FLAMINGO_MOCHA_HEX)
+public data class FlamingoPaletteColor(override val palette: Palette) : PaletteColor(
+    definition = flamingo,
+    color = palette.whenPalette(
+        latte = ColorValue.FLAMINGO_LATTE_HEX,
+        frappe = ColorValue.FLAMINGO_FRAPPE_HEX,
+        macchiato = ColorValue.FLAMINGO_MACCHIATO_HEX,
+        mocha = ColorValue.FLAMINGO_MOCHA_HEX
     )
-}
+)

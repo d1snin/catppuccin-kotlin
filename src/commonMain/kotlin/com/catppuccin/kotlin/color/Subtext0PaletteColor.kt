@@ -25,14 +25,12 @@ package com.catppuccin.kotlin.color
 import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class Subtext0PaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = subtext0
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.SUBTEXT0_LATTE_HEX),
-        frappe = Color(ColorValue.SUBTEXT0_FRAPPE_HEX),
-        macchiato = Color(ColorValue.SUBTEXT0_MACCHIATO_HEX),
-        mocha = Color(ColorValue.SUBTEXT0_MOCHA_HEX)
+public data class Subtext0PaletteColor(override val palette: Palette) : PaletteColor(
+    definition = subtext0,
+    color = palette.whenPalette(
+        latte = ColorValue.SUBTEXT0_LATTE_HEX,
+        frappe = ColorValue.SUBTEXT0_FRAPPE_HEX,
+        macchiato = ColorValue.SUBTEXT0_MACCHIATO_HEX,
+        mocha = ColorValue.SUBTEXT0_MOCHA_HEX
     )
-}
+)

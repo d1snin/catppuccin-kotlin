@@ -25,14 +25,12 @@ package com.catppuccin.kotlin.color
 import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class MauvePaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = mauve
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.MAUVE_LATTE_HEX),
-        frappe = Color(ColorValue.MAUVE_FRAPPE_HEX),
-        macchiato = Color(ColorValue.MAUVE_MACCHIATO_HEX),
-        mocha = Color(ColorValue.MAUVE_MOCHA_HEX)
+public data class MauvePaletteColor(override val palette: Palette) : PaletteColor(
+    definition = mauve,
+    color = palette.whenPalette(
+        latte = ColorValue.MAUVE_LATTE_HEX,
+        frappe = ColorValue.MAUVE_FRAPPE_HEX,
+        macchiato = ColorValue.MAUVE_MACCHIATO_HEX,
+        mocha = ColorValue.MAUVE_MOCHA_HEX
     )
-}
+)

@@ -22,17 +22,17 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.*
+import com.catppuccin.kotlin.ColorValue
+import com.catppuccin.kotlin.Palette
+import com.catppuccin.kotlin.blue
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class BluePaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = blue
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.BLUE_LATTE_HEX),
-        frappe = Color(ColorValue.BLUE_FRAPPE_HEX),
-        macchiato = Color(ColorValue.BLUE_MACCHIATO_HEX),
-        mocha = Color(ColorValue.BLUE_MOCHA_HEX)
+public data class BluePaletteColor(override val palette: Palette) : PaletteColor(
+    definition = blue,
+    color = palette.whenPalette(
+        latte = ColorValue.BLUE_LATTE_HEX,
+        frappe = ColorValue.BLUE_FRAPPE_HEX,
+        macchiato = ColorValue.BLUE_MACCHIATO_HEX,
+        mocha = ColorValue.BLUE_MOCHA_HEX
     )
-}
+)

@@ -25,14 +25,12 @@ package com.catppuccin.kotlin.color
 import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class Overlay0PaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = overlay0
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.OVERLAY0_LATTE_HEX),
-        frappe = Color(ColorValue.OVERLAY0_FRAPPE_HEX),
-        macchiato = Color(ColorValue.OVERLAY0_MACCHIATO_HEX),
-        mocha = Color(ColorValue.OVERLAY0_MOCHA_HEX)
+public data class Overlay0PaletteColor(override val palette: Palette) : PaletteColor(
+    definition = overlay0,
+    color = palette.whenPalette(
+        latte = ColorValue.OVERLAY0_LATTE_HEX,
+        frappe = ColorValue.OVERLAY0_FRAPPE_HEX,
+        macchiato = ColorValue.OVERLAY0_MACCHIATO_HEX,
+        mocha = ColorValue.OVERLAY0_MOCHA_HEX
     )
-}
+)

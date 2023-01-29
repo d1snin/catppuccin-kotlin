@@ -22,18 +22,20 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.Color
 import com.catppuccin.kotlin.ColorDefinition
-import com.catppuccin.kotlin.Hex
+import com.catppuccin.kotlin.ColorValueContainer
 import com.catppuccin.kotlin.Palette
 
-public sealed class PaletteColor {
-
-    public abstract val definition: ColorDefinition
+/**
+ * Defines all the information related to the color:
+ * It's [palette], [color values][ColorValueContainer] and [definition].
+ *
+ * @see Palette
+ * @see ColorValueContainer
+ * @see ColorDefinition
+ */
+public sealed class PaletteColor(public val definition: ColorDefinition, internal val color: ColorValueContainer) :
+    ColorValueContainer by color {
 
     public abstract val palette: Palette
-
-    internal abstract val color: Color
-
-    public val hex: Hex get() = color.hex
 }

@@ -25,14 +25,12 @@ package com.catppuccin.kotlin.color
 import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class PeachPaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = peach
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.PEACH_LATTE_HEX),
-        frappe = Color(ColorValue.PEACH_FRAPPE_HEX),
-        macchiato = Color(ColorValue.PEACH_MACCHIATO_HEX),
-        mocha = Color(ColorValue.PEACH_MOCHA_HEX)
+public data class PeachPaletteColor(override val palette: Palette) : PaletteColor(
+    definition = peach,
+    color = palette.whenPalette(
+        latte = ColorValue.PEACH_LATTE_HEX,
+        frappe = ColorValue.PEACH_FRAPPE_HEX,
+        macchiato = ColorValue.PEACH_MACCHIATO_HEX,
+        mocha = ColorValue.BASE_MOCHA_HEX
     )
-}
+)

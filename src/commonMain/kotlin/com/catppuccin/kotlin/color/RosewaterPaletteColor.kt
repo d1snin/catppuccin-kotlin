@@ -25,14 +25,12 @@ package com.catppuccin.kotlin.color
 import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class RosewaterPaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = rosewater
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.ROSEWATER_LATTE_HEX),
-        frappe = Color(ColorValue.ROSEWATER_FRAPPE_HEX),
-        macchiato = Color(ColorValue.ROSEWATER_MACCHIATO_HEX),
-        mocha = Color(ColorValue.ROSEWATER_MOCHA_HEX)
+public data class RosewaterPaletteColor(override val palette: Palette) : PaletteColor(
+    definition = rosewater,
+    color = palette.whenPalette(
+        latte = ColorValue.ROSEWATER_LATTE_HEX,
+        frappe = ColorValue.ROSEWATER_FRAPPE_HEX,
+        macchiato = ColorValue.ROSEWATER_MACCHIATO_HEX,
+        mocha = ColorValue.ROSEWATER_MOCHA_HEX
     )
-}
+)

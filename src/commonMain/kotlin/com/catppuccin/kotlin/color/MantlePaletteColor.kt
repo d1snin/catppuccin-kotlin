@@ -25,14 +25,12 @@ package com.catppuccin.kotlin.color
 import com.catppuccin.kotlin.*
 import com.catppuccin.kotlin.util.whenPalette
 
-public data class MantlePaletteColor(override val palette: Palette) : PaletteColor() {
-
-    override val definition: ColorDefinition = mantle
-
-    override val color = whenPalette(
-        latte = Color(ColorValue.MANTLE_LATTE_HEX),
-        frappe = Color(ColorValue.MANTLE_FRAPPE_HEX),
-        macchiato = Color(ColorValue.MANTLE_MACCHIATO_HEX),
-        mocha = Color(ColorValue.MANTLE_MOCHA_HEX)
+public data class MantlePaletteColor(override val palette: Palette) : PaletteColor(
+    definition = mantle,
+    color = palette.whenPalette(
+        latte = ColorValue.MANTLE_LATTE_HEX,
+        frappe = ColorValue.MANTLE_FRAPPE_HEX,
+        macchiato = ColorValue.MANTLE_MACCHIATO_HEX,
+        mocha = ColorValue.MANTLE_MOCHA_HEX
     )
-}
+)
