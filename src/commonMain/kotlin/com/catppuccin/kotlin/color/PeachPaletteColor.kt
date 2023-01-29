@@ -22,7 +22,9 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.*
+import com.catppuccin.kotlin.ColorValue
+import com.catppuccin.kotlin.Palette
+import com.catppuccin.kotlin.peach
 import com.catppuccin.kotlin.util.whenPalette
 
 public data class PeachPaletteColor(override val palette: Palette) : PaletteColor(

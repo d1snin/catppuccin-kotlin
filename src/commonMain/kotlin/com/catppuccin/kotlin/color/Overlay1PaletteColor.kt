@@ -22,7 +22,9 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.*
+import com.catppuccin.kotlin.ColorValue
+import com.catppuccin.kotlin.Palette
+import com.catppuccin.kotlin.overlay1
 import com.catppuccin.kotlin.util.whenPalette
 
 public data class Overlay1PaletteColor(override val palette: Palette) : PaletteColor(

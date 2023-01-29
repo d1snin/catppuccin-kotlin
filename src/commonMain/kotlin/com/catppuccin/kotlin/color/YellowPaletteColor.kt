@@ -22,8 +22,10 @@
 
 package com.catppuccin.kotlin.color
 
-import com.catppuccin.kotlin.*
+import com.catppuccin.kotlin.ColorValue
+import com.catppuccin.kotlin.Palette
 import com.catppuccin.kotlin.util.whenPalette
+import com.catppuccin.kotlin.yellow
 
 public data class YellowPaletteColor(override val palette: Palette) : PaletteColor(
     definition = yellow,
