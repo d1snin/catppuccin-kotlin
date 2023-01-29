@@ -24,5 +24,24 @@ package com.catppuccin.kotlin
 
 public typealias Hex = Int
 
+/**
+ * String representation of a hexadecimal color value.
+ *
+ * Example usage:
+ *
+ * ```kotlin
+ * 0x2d5e4c.formatted // "2d5e4c"
+ * ```
+ */
 public val Hex.formatted: String get() = toULong().toString(16)
+
+/**
+ * String representation of a hexadecimal color value with hash symbol as prefix.
+ *
+ * Example usage:
+ *
+ * ```kotlin
+ * 0x2d5e4c.formattedWithHashPrefix // "#2d5e4c"
+ * ```
+ */
 public val Hex.formattedWithHashPrefix: String get() = "#$formatted"
