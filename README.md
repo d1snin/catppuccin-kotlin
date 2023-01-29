@@ -80,12 +80,12 @@ To run tests:
 ./gradlew test
 ```
 
-## 🙋 CI/CD
+## CI/CD
 
 This project has a GitHub actions workflow to automatically build binaries and deploy to Maven Central repository. 
 The workflows are stored at [.github/workflows](.github/workflows)
 
-## 💝 Thanks to
+## Thanks to
 
 - [Mikhail Titov <me@d1s.dev>](https://github.com/d1snin)
 
