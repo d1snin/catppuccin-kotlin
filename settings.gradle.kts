@@ -32,6 +32,8 @@ pluginManagement {
 
         val versionsPluginVersion: String by settings
 
+        val deployerVersion: String by settings
+
         kotlin("multiplatform") version kotlinVersion
 
         id("org.jetbrains.dokka") version dokkaVersion
@@ -39,5 +41,7 @@ pluginManagement {
         id("org.jetbrains.kotlinx.kover") version koverVersion
 
         id("com.github.ben-manes.versions") version versionsPluginVersion
+
+        id("io.deepmedia.tools.deployer") version deployerVersion
     }
 }

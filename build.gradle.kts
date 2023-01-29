@@ -40,6 +40,8 @@ buildscript {
     }
 }
 
+val ciBuild = System.getenv("CATPPUCCIN_CI_BUILD").toBoolean()
+
 val projectGroup: String by project
 val projectVersion: String by project
 
@@ -91,5 +93,40 @@ kotlin {
 tasks.withType<DokkaTask>().configureEach {
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
         footerMessage = "Copyright (c) 2021 Catppuccin"
+    }
+}
+
+deployer {
+    defaultSpec {
+        projectInfo {
+            name.set("Catppuccin for Kotlin")
+            description.set("Catppuccin color palette support for Kotlin/Multiplatform.")
+
+            url.set("https://github.com/catppuccin/kotlin")
+
+            license(apache2)
+
+            developer("d1snin", "me@d1s.dev")
+        }
+    }
+
+    if (ciBuild) {
+        sonatypeSpec {
+            auth {
+                val userSecret = secret("OSSRH_USERNAME")
+                val passwordSecret = secret("OSSRH_PASSWORD")
+
+                user.set(userSecret)
+                password.set(passwordSecret)
+            }
+
+            signing {
+                val keySecret = secret("MAVEN_GPG_PRIVATE_KEY")
+                val passwordSecret = secret("MAVEN_GPG_PASSPHRASE")
+
+                key.set(keySecret)
+                password.set(passwordSecret)
+            }
+        }
     }
 }
