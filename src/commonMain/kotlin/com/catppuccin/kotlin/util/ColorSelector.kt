@@ -23,17 +23,19 @@
 package com.catppuccin.kotlin.util
 
 import com.catppuccin.kotlin.Color
+import com.catppuccin.kotlin.Hex
 import com.catppuccin.kotlin.Palette
-import com.catppuccin.kotlin.color.PaletteColor
 
-internal fun PaletteColor.whenPalette(
-    latte: Color,
-    frappe: Color,
-    macchiato: Color,
-    mocha: Color
-): Color = when (this.palette) {
-    Palette.Latte -> latte
-    Palette.Frappe -> frappe
-    Palette.Macchiato -> macchiato
-    Palette.Mocha -> mocha
-}
+internal fun Palette.whenPalette(
+    latte: Hex,
+    frappe: Hex,
+    macchiato: Hex,
+    mocha: Hex
+): Color = Color(
+    when (this) {
+        Palette.Latte -> latte
+        Palette.Frappe -> frappe
+        Palette.Macchiato -> macchiato
+        Palette.Mocha -> mocha
+    }
+)
