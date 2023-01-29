@@ -87,7 +87,7 @@ The workflows are stored at [.github/workflows](.github/workflows)
 
 ## Thanks to
 
-- [Mikhail Titov <me@d1s.dev>](https://github.com/d1snin)
+- [Mikhail Titov](https://github.com/d1snin)
 
 &nbsp;
 
