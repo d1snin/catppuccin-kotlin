@@ -24,6 +24,10 @@ package com.catppuccin.kotlin
 
 internal data class Color(override val hex: Hex) : ColorValueContainer {
 
+    constructor(hexInt: Int) : this(
+        Hex(hexInt)
+    )
+
     private val hexString = hex.formatted
 
     override val rgb: Rgb = Rgb(

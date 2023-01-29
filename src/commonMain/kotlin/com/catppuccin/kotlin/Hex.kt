@@ -22,26 +22,41 @@
 
 package com.catppuccin.kotlin
 
-public typealias Hex = Int
+public data class Hex(public val intValue: Int) {
 
-/**
- * String representation of a hexadecimal color value.
- *
- * Example usage:
- *
- * ```kotlin
- * 0x2d5e4c.formatted // "2d5e4c"
- * ```
- */
-public val Hex.formatted: String get() = toULong().toString(16)
+    /**
+     * String representation of a hexadecimal color value.
+     *
+     * Example usage:
+     *
+     * ```kotlin
+     * Hex(0x2d5e4c).formatted // "2d5e4c"
+     * ```
+     *
+     * @see formattedWithHashPrefix
+     */
+    public val formatted: String = run {
+        val stringValue = intValue.toULong().toString(16)
 
-/**
- * String representation of a hexadecimal color value with hash symbol as prefix.
- *
- * Example usage:
- *
- * ```kotlin
- * 0x2d5e4c.formattedWithHashPrefix // "#2d5e4c"
- * ```
- */
-public val Hex.formattedWithHashPrefix: String get() = "#$formatted"
+        normalizeStringValue(stringValue)
+    }
+
+    /**
+     * String representation of a hexadecimal color value with hash symbol as prefix.
+     *
+     * Example usage:
+     *
+     * ```kotlin
+     * Hex(0x2d5e4c).formattedWithHashPrefix // "#2d5e4c"
+     * ```
+     *
+     * @see formatted
+     */
+    public val formattedWithHashPrefix: String = "#$formatted"
+
+    // 0x023d4b.toULong().toString(16) returns "34d4b" which is not a valid
+    // hexadecimal color value. normalizeStringValue fixes this problem by
+    // putting '0' at the start of a string value if it is not already
+    // 6 characters long
+    private fun normalizeStringValue(value: String) = value.padStart(6, '0')
+}
