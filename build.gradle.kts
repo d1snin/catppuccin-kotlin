@@ -20,10 +20,24 @@
  * SOFTWARE.
  */
 
+import org.jetbrains.dokka.base.DokkaBase
+import org.jetbrains.dokka.base.DokkaBaseConfiguration
+import org.jetbrains.dokka.gradle.DokkaTask
+
 plugins {
     kotlin("multiplatform")
+    id("org.jetbrains.dokka")
     id("org.jetbrains.kotlinx.kover")
     id("com.github.ben-manes.versions")
+    id("io.deepmedia.tools.deployer")
+}
+
+buildscript {
+    dependencies {
+        val dokkaVersion: String by project
+
+        classpath("org.jetbrains.dokka:dokka-base:$dokkaVersion")
+    }
 }
 
 val projectGroup: String by project
@@ -72,4 +86,10 @@ kotlin {
     }
 
     explicitApi()
+}
+
+tasks.withType<DokkaTask>().configureEach {
+    pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+        footerMessage = "Copyright (c) 2021 Catppuccin"
+    }
 }
