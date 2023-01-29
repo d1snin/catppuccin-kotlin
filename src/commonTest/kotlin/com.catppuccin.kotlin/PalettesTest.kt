@@ -46,4 +46,9 @@ class PalettesTest {
     fun mochaMustReturnValidPalette() {
         assertEquals(Palette.Mocha, mocha)
     }
+
+    @Test
+    fun palettesMustReturnAllPalettes() {
+        assertEquals(listOf(latte, frappe, macchiato, mocha), allPalettes)
+    }
 }

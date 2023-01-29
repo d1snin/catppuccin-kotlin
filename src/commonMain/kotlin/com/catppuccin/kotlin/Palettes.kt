@@ -22,6 +22,8 @@
 
 package com.catppuccin.kotlin
 
+public typealias Palettes = List<Palette>
+
 public val latte: Palette = Palette.Latte
 
 public val frappe: Palette = Palette.Frappe
@@ -29,3 +31,5 @@ public val frappe: Palette = Palette.Frappe
 public val macchiato: Palette = Palette.Macchiato
 
 public val mocha: Palette = Palette.Mocha
+
+public val allPalettes: Palettes = listOf(latte, frappe, macchiato, mocha)
