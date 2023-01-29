@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class RosewaterPaletteColorTest : PaletteColorTestBase(::RosewaterPaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(rosewater, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

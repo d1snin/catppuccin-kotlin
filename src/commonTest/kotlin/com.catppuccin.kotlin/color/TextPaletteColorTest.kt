@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class TextPaletteColorTest : PaletteColorTestBase(::TextPaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(text, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

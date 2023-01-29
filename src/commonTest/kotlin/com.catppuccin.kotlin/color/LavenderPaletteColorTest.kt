@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class LavenderPaletteColorTest : PaletteColorTestBase(::LavenderPaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(lavender, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

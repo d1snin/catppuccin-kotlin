@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class CrustPaletteColorTest : PaletteColorTestBase(::CrustPaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(crust, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

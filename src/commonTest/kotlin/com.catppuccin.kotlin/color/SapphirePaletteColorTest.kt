@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class SapphirePaletteColorTest : PaletteColorTestBase(::SapphirePaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(sapphire, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

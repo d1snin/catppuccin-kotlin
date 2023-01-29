@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class SkyPaletteColorTest : PaletteColorTestBase(::SkyPaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(sky, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

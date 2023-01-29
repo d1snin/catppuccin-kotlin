@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class MantlePaletteColorTest : PaletteColorTestBase(::MantlePaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(mantle, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

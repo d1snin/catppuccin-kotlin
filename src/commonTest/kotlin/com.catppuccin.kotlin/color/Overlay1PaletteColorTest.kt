@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class Overlay1PaletteColorTest : PaletteColorTestBase(::Overlay1PaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(overlay1, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

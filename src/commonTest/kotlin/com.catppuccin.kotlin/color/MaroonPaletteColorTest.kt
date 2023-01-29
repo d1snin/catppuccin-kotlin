@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class MaroonPaletteColorTest : PaletteColorTestBase(::MaroonPaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(maroon, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {

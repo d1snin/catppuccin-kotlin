@@ -26,11 +26,13 @@ import com.catppuccin.kotlin.Color
 import com.catppuccin.kotlin.Palette
 import kotlin.test.assertEquals
 
-abstract class PaletteColorTestBase(private val creator: PaletteColorCreator) {
+abstract class PaletteColorTestBase(protected val creator: PaletteColorCreator) {
 
     internal fun testPaletteColor(palette: Palette, expectedColor: Color) {
         val paletteColor = creator(palette)
 
         assertEquals(expectedColor, paletteColor.color)
     }
+
+    fun instantiatePaletteColor(palette: Palette = Palette.Latte) = creator(palette)
 }

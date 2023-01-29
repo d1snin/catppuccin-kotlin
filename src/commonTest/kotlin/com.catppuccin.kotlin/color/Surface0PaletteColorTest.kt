@@ -24,8 +24,14 @@ package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.*
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class Surface0PaletteColorTest : PaletteColorTestBase(::Surface0PaletteColor) {
+
+    @Test
+    fun mustReturnValidDefinition() {
+        assertEquals(surface0, instantiatePaletteColor().definition)
+    }
 
     @Test
     fun mustReturnValidLatteColor() {
