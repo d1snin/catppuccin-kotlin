@@ -28,8 +28,10 @@ import kotlin.test.assertEquals
 
 abstract class PaletteColorTestBase(protected val creator: PaletteColorCreator) {
 
-    internal fun testPaletteColor(palette: Palette, expectedColor: Color) {
+    internal fun testPaletteColor(palette: Palette, expectedColorHex: Int) {
         val paletteColor = creator(palette)
+
+        val expectedColor = Color(expectedColorHex)
 
         assertEquals(expectedColor, paletteColor.color)
     }

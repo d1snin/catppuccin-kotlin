@@ -27,9 +27,9 @@ import kotlin.test.assertEquals
 
 class HexTest {
 
-    private val hex: Hex = 0xf4a7c9
+    private val hex: Hex = Hex(0x04a7c9)
 
-    private val hexString = "f4a7c9"
+    private val hexString = "04a7c9"
 
     @Test
     fun mustFormatHexValue() {

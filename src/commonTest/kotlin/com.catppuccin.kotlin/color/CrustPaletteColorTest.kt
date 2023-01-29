@@ -37,7 +37,7 @@ class CrustPaletteColorTest : PaletteColorTestBase(::CrustPaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.CRUST_LATTE_HEX)
+            expectedColorHex = ColorValue.CRUST_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class CrustPaletteColorTest : PaletteColorTestBase(::CrustPaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.CRUST_FRAPPE_HEX)
+            expectedColorHex = ColorValue.CRUST_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class CrustPaletteColorTest : PaletteColorTestBase(::CrustPaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.CRUST_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.CRUST_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class CrustPaletteColorTest : PaletteColorTestBase(::CrustPaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.CRUST_MOCHA_HEX)
+            expectedColorHex = ColorValue.CRUST_MOCHA_HEX
         )
     }
 }

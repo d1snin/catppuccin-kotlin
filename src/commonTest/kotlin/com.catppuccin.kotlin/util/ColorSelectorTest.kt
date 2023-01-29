@@ -32,10 +32,10 @@ import kotlin.test.assertEquals
 class ColorSelectorTest {
 
     private val mockColors = listOf(
-        Color(0x1),
-        Color(0x2),
-        Color(0x3),
-        Color(0x4)
+        Color(0x000001),
+        Color(0x000002),
+        Color(0x000003),
+        Color(0x000004)
     )
 
     private val latteMockColor = mockColors[0]
@@ -74,10 +74,10 @@ class ColorSelectorTest {
         assertEquals(mochaMockColor, paletteColor.testWhenPalette())
     }
 
-    private fun PaletteColor.testWhenPalette() = whenPalette(
-        latte = latteMockColor,
-        frappe = frappeMockColor,
-        macchiato = macchiatoMockColor,
-        mocha = mochaMockColor
+    private fun PaletteColor.testWhenPalette() = palette.whenPalette(
+        latte = latteMockColor.hex.intValue,
+        frappe = frappeMockColor.hex.intValue,
+        macchiato = macchiatoMockColor.hex.intValue,
+        mocha = mochaMockColor.hex.intValue
     )
 }

@@ -37,7 +37,7 @@ class SapphirePaletteColorTest : PaletteColorTestBase(::SapphirePaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.SAPPHIRE_LATTE_HEX)
+            expectedColorHex = ColorValue.SAPPHIRE_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class SapphirePaletteColorTest : PaletteColorTestBase(::SapphirePaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.SAPPHIRE_FRAPPE_HEX)
+            expectedColorHex = ColorValue.SAPPHIRE_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class SapphirePaletteColorTest : PaletteColorTestBase(::SapphirePaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.SAPPHIRE_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.SAPPHIRE_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class SapphirePaletteColorTest : PaletteColorTestBase(::SapphirePaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.SAPPHIRE_MOCHA_HEX)
+            expectedColorHex = ColorValue.SAPPHIRE_MOCHA_HEX
         )
     }
 }

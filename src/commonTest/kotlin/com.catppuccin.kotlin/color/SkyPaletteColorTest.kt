@@ -37,7 +37,7 @@ class SkyPaletteColorTest : PaletteColorTestBase(::SkyPaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.SKY_LATTE_HEX)
+            expectedColorHex = ColorValue.SKY_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class SkyPaletteColorTest : PaletteColorTestBase(::SkyPaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.SKY_FRAPPE_HEX)
+            expectedColorHex = ColorValue.SKY_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class SkyPaletteColorTest : PaletteColorTestBase(::SkyPaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.SKY_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.SKY_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class SkyPaletteColorTest : PaletteColorTestBase(::SkyPaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.SKY_MOCHA_HEX)
+            expectedColorHex = ColorValue.SKY_MOCHA_HEX
         )
     }
 }

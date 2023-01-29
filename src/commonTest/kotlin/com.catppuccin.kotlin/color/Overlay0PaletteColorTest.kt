@@ -37,7 +37,7 @@ class Overlay0PaletteColorTest : PaletteColorTestBase(::Overlay0PaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.OVERLAY0_LATTE_HEX)
+            expectedColorHex = ColorValue.OVERLAY0_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class Overlay0PaletteColorTest : PaletteColorTestBase(::Overlay0PaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.OVERLAY0_FRAPPE_HEX)
+            expectedColorHex = ColorValue.OVERLAY0_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class Overlay0PaletteColorTest : PaletteColorTestBase(::Overlay0PaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.OVERLAY0_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.OVERLAY0_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class Overlay0PaletteColorTest : PaletteColorTestBase(::Overlay0PaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.OVERLAY0_MOCHA_HEX)
+            expectedColorHex = ColorValue.OVERLAY0_MOCHA_HEX
         )
     }
 }

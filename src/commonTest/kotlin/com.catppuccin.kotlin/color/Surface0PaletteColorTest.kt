@@ -37,7 +37,7 @@ class Surface0PaletteColorTest : PaletteColorTestBase(::Surface0PaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.SURFACE0_LATTE_HEX)
+            expectedColorHex = ColorValue.SURFACE0_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class Surface0PaletteColorTest : PaletteColorTestBase(::Surface0PaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.SURFACE0_FRAPPE_HEX)
+            expectedColorHex = ColorValue.SURFACE0_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class Surface0PaletteColorTest : PaletteColorTestBase(::Surface0PaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.SURFACE0_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.SURFACE0_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class Surface0PaletteColorTest : PaletteColorTestBase(::Surface0PaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.SURFACE0_MOCHA_HEX)
+            expectedColorHex = ColorValue.SURFACE0_MOCHA_HEX
         )
     }
 }

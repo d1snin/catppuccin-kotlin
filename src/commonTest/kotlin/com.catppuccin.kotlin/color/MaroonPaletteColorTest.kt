@@ -37,7 +37,7 @@ class MaroonPaletteColorTest : PaletteColorTestBase(::MaroonPaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.MAROON_LATTE_HEX)
+            expectedColorHex = ColorValue.MAROON_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class MaroonPaletteColorTest : PaletteColorTestBase(::MaroonPaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.MAROON_FRAPPE_HEX)
+            expectedColorHex = ColorValue.MAROON_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class MaroonPaletteColorTest : PaletteColorTestBase(::MaroonPaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.MAROON_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.MAROON_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class MaroonPaletteColorTest : PaletteColorTestBase(::MaroonPaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.MAROON_MOCHA_HEX)
+            expectedColorHex = ColorValue.MAROON_MOCHA_HEX
         )
     }
 }

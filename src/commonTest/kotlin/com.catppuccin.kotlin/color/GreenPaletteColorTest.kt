@@ -37,7 +37,7 @@ class GreenPaletteColorTest : PaletteColorTestBase(::GreenPaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.GREEN_LATTE_HEX)
+            expectedColorHex = ColorValue.GREEN_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class GreenPaletteColorTest : PaletteColorTestBase(::GreenPaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.GREEN_FRAPPE_HEX)
+            expectedColorHex = ColorValue.GREEN_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class GreenPaletteColorTest : PaletteColorTestBase(::GreenPaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.GREEN_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.GREEN_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class GreenPaletteColorTest : PaletteColorTestBase(::GreenPaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.GREEN_MOCHA_HEX)
+            expectedColorHex = ColorValue.GREEN_MOCHA_HEX
         )
     }
 }

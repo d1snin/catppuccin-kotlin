@@ -24,6 +24,7 @@ package com.catppuccin.kotlin
 
 import com.catppuccin.kotlin.color.*
 import kotlin.test.Test
+import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 
 class ColorDefinitionsTest {
@@ -242,5 +243,15 @@ class ColorDefinitionsTest {
         )
 
         assertEquals(expected, allColors)
+    }
+
+    @Test
+    fun colorsShouldReturnTheProvidedColorsWithoutChanges() {
+        assertContentEquals(listOf(rosewater, flamingo), colors(listOf(rosewater, flamingo)))
+    }
+
+    @Test
+    fun colorsWithVarargShouldReturnTheProvidedColorsWithoutChanges() {
+        assertContentEquals(listOf(rosewater, flamingo), colors(rosewater, flamingo))
     }
 }

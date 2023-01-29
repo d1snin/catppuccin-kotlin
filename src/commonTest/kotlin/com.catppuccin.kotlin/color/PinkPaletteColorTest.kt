@@ -37,7 +37,7 @@ class PinkPaletteColorTest : PaletteColorTestBase(::PinkPaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.PINK_LATTE_HEX)
+            expectedColorHex = ColorValue.PINK_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class PinkPaletteColorTest : PaletteColorTestBase(::PinkPaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.PINK_FRAPPE_HEX)
+            expectedColorHex = ColorValue.PINK_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class PinkPaletteColorTest : PaletteColorTestBase(::PinkPaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.PINK_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.PINK_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class PinkPaletteColorTest : PaletteColorTestBase(::PinkPaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.PINK_MOCHA_HEX)
+            expectedColorHex = ColorValue.PINK_MOCHA_HEX
         )
     }
 }

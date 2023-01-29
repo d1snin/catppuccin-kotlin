@@ -37,7 +37,7 @@ class MantlePaletteColorTest : PaletteColorTestBase(::MantlePaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.MANTLE_LATTE_HEX)
+            expectedColorHex = ColorValue.MANTLE_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class MantlePaletteColorTest : PaletteColorTestBase(::MantlePaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.MANTLE_FRAPPE_HEX)
+            expectedColorHex = ColorValue.MANTLE_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class MantlePaletteColorTest : PaletteColorTestBase(::MantlePaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.MANTLE_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.MANTLE_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class MantlePaletteColorTest : PaletteColorTestBase(::MantlePaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.MANTLE_MOCHA_HEX)
+            expectedColorHex = ColorValue.MANTLE_MOCHA_HEX
         )
     }
 }

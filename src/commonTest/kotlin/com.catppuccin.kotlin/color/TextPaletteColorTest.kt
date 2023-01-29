@@ -37,7 +37,7 @@ class TextPaletteColorTest : PaletteColorTestBase(::TextPaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.TEXT_LATTE_HEX)
+            expectedColorHex = ColorValue.TEXT_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class TextPaletteColorTest : PaletteColorTestBase(::TextPaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.TEXT_FRAPPE_HEX)
+            expectedColorHex = ColorValue.TEXT_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class TextPaletteColorTest : PaletteColorTestBase(::TextPaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.TEXT_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.TEXT_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class TextPaletteColorTest : PaletteColorTestBase(::TextPaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.TEXT_MOCHA_HEX)
+            expectedColorHex = ColorValue.TEXT_MOCHA_HEX
         )
     }
 }

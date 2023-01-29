@@ -37,7 +37,7 @@ class RosewaterPaletteColorTest : PaletteColorTestBase(::RosewaterPaletteColor) 
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.ROSEWATER_LATTE_HEX)
+            expectedColorHex = ColorValue.ROSEWATER_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class RosewaterPaletteColorTest : PaletteColorTestBase(::RosewaterPaletteColor) 
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.ROSEWATER_FRAPPE_HEX)
+            expectedColorHex = ColorValue.ROSEWATER_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class RosewaterPaletteColorTest : PaletteColorTestBase(::RosewaterPaletteColor) 
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.ROSEWATER_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.ROSEWATER_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class RosewaterPaletteColorTest : PaletteColorTestBase(::RosewaterPaletteColor) 
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.ROSEWATER_MOCHA_HEX)
+            expectedColorHex = ColorValue.ROSEWATER_MOCHA_HEX
         )
     }
 }

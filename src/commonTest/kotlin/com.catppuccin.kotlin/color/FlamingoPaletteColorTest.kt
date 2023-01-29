@@ -37,7 +37,7 @@ class FlamingoPaletteColorTest : PaletteColorTestBase(::FlamingoPaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.FLAMINGO_LATTE_HEX)
+            expectedColorHex = ColorValue.FLAMINGO_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class FlamingoPaletteColorTest : PaletteColorTestBase(::FlamingoPaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.FLAMINGO_FRAPPE_HEX)
+            expectedColorHex = ColorValue.FLAMINGO_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class FlamingoPaletteColorTest : PaletteColorTestBase(::FlamingoPaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.FLAMINGO_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.FLAMINGO_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class FlamingoPaletteColorTest : PaletteColorTestBase(::FlamingoPaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.FLAMINGO_MOCHA_HEX)
+            expectedColorHex = ColorValue.FLAMINGO_MOCHA_HEX
         )
     }
 }

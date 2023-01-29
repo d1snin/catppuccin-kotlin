@@ -37,7 +37,7 @@ class TealPaletteColorTest : PaletteColorTestBase(::TealPaletteColor) {
     fun mustReturnValidLatteColor() {
         testPaletteColor(
             palette = latte,
-            expectedColor = Color(ColorValue.TEAL_LATTE_HEX)
+            expectedColorHex = ColorValue.TEAL_LATTE_HEX
         )
     }
 
@@ -45,7 +45,7 @@ class TealPaletteColorTest : PaletteColorTestBase(::TealPaletteColor) {
     fun mustReturnValidFrappeColor() {
         testPaletteColor(
             palette = frappe,
-            expectedColor = Color(ColorValue.TEAL_FRAPPE_HEX)
+            expectedColorHex = ColorValue.TEAL_FRAPPE_HEX
         )
     }
 
@@ -53,7 +53,7 @@ class TealPaletteColorTest : PaletteColorTestBase(::TealPaletteColor) {
     fun mustReturnValidMacchiatoColor() {
         testPaletteColor(
             palette = macchiato,
-            expectedColor = Color(ColorValue.TEAL_MACCHIATO_HEX)
+            expectedColorHex = ColorValue.TEAL_MACCHIATO_HEX
         )
     }
 
@@ -61,7 +61,7 @@ class TealPaletteColorTest : PaletteColorTestBase(::TealPaletteColor) {
     fun mustReturnValidMochaColor() {
         testPaletteColor(
             palette = mocha,
-            expectedColor = Color(ColorValue.TEAL_MOCHA_HEX)
+            expectedColorHex = ColorValue.TEAL_MOCHA_HEX
         )
     }
 }
