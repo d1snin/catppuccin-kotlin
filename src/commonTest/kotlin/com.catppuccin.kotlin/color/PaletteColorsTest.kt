@@ -23,9 +23,18 @@
 package com.catppuccin.kotlin.color
 
 import com.catppuccin.kotlin.allPalettes
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
-public typealias PaletteColors = List<PaletteColor>
+class PaletteColorsTest {
 
-public val allPaletteColors: PaletteColors = allPalettes.flatMap {
-    it.colors
+    @Test
+    fun allPaletteColorsMustReturnAllColorsOfAllPalettes() {
+        assertEquals(
+            allPalettes.flatMap {
+                it.colors
+            },
+            allPaletteColors
+        )
+    }
 }
