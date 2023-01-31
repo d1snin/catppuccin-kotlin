@@ -56,6 +56,11 @@ kotlin {
     jvm {
         compilations.all {
             kotlinOptions.jvmTarget = JavaVersion.VERSION_17.majorVersion
+
+            java {
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
+            }
         }
 
         withJava()
