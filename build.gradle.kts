@@ -24,6 +24,11 @@ import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
 import org.jetbrains.dokka.gradle.DokkaTask
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.dokka")
@@ -50,11 +55,6 @@ version = projectVersion
 
 repositories {
     mavenCentral()
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
 }
 
 kotlin {
