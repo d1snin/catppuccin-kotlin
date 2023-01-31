@@ -1,0 +1,6 @@
+jdk:
+  - openjdk17
+install:
+  - echo "Building and publishing"
+  - chmod +x ./gradlew
+  - ./gradlew publishToMavenLocal
