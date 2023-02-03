@@ -56,6 +56,9 @@ allPalettes
 allPaletteColors
 ```
 
+## What targets are currently supported?
+Currently supported targets are JVM and JS. Native targets are coming soon! Let me know if you miss the support of them.
+
 ## Contributing
 
 If you are looking to contribute, please read through our
