@@ -1,0 +1,33 @@
+name: Deploy to maven.d1s.dev (snapshots)
+
+on:
+  push
+
+jobs:
+  deploy_snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'liberica'
+          cache: 'gradle'
+
+      - name: Get commit hash
+        run: echo "GIT_SHORT_COMMIT_SHA=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_ENV
+
+      - name: Deploy to maven.d1s.dev (snapshots)
+        env:
+          MAVEN_D1S_DEV_USERNAME: ${{ secrets.MAVEN_D1S_DEV_USERNAME }}
+          MAVEN_D1S_DEV_PASSWORD: ${{ secrets.MAVEN_D1S_DEV_PASSWORD }}
+        run: ./gradlew publishAllPublicationsToMavenD1sDevRepositoryRepository
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build_artifacts
+          path: ./build/libs

@@ -23,13 +23,14 @@
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
 import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.kotlin.util.capitalizeDecapitalize.toLowerCaseAsciiOnly
 
 plugins {
     kotlin("multiplatform")
+    id("maven-publish")
     id("org.jetbrains.dokka")
     id("org.jetbrains.kotlinx.kover")
     id("com.github.ben-manes.versions")
-    id("io.deepmedia.tools.deployer")
 }
 
 buildscript {
@@ -39,8 +40,6 @@ buildscript {
         classpath("org.jetbrains.dokka:dokka-base:$dokkaVersion")
     }
 }
-
-val ciBuild = System.getenv("CATPPUCCIN_CI_BUILD").toBoolean()
 
 val projectGroup: String by project
 val projectVersion: String by project
@@ -95,43 +94,51 @@ kotlin {
     explicitApi()
 }
 
+publishing {
+    repositories {
+        maven {
+            name = "mavenD1sDevRepository"
+
+            val channel = if (isDevVersion) {
+                "snapshots"
+            } else {
+                "releases"
+            }
+
+            url = uri("https://maven.d1s.dev/${channel.toLowerCaseAsciiOnly()}")
+
+            credentials {
+                username = System.getenv("MAVEN_D1S_DEV_USERNAME")
+                password = System.getenv("MAVEN_D1S_DEV_PASSWORD")
+            }
+        }
+    }
+
+    publications {
+        create<MavenPublication>("maven") {
+            if (isDevVersion) {
+                val commitShortSha = System.getenv("GIT_SHORT_COMMIT_SHA")
+
+                commitShortSha?.let {
+                    version = "$version-$it"
+                }
+            }
+        }
+    }
+}
+
 tasks.withType<DokkaTask>().configureEach {
+    dokkaSourceSets {
+        configureEach {
+            val moduleDocsPath: String by project
+
+            includes.setFrom(moduleDocsPath)
+        }
+    }
+
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
         footerMessage = "Copyright (c) 2021 Catppuccin"
     }
 }
 
-deployer {
-    defaultSpec {
-        projectInfo {
-            name.set("Catppuccin for Kotlin")
-            description.set("Catppuccin color palette support for Kotlin/Multiplatform.")
-
-            url.set("https://github.com/catppuccin/kotlin")
-
-            license(apache2)
-
-            developer("d1snin", "me@d1s.dev")
-        }
-    }
-
-    if (ciBuild) {
-        sonatypeSpec {
-            auth {
-                val userSecret = secret("OSSRH_USERNAME")
-                val passwordSecret = secret("OSSRH_PASSWORD")
-
-                user.set(userSecret)
-                password.set(passwordSecret)
-            }
-
-            signing {
-                val keySecret = secret("MAVEN_GPG_PRIVATE_KEY")
-                val passwordSecret = secret("MAVEN_GPG_PASSPHRASE")
-
-                key.set(keySecret)
-                password.set(passwordSecret)
-            }
-        }
-    }
-}
+val isDevVersion get() = version.toString().endsWith("-dev")

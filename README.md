@@ -6,22 +6,23 @@
 </h3>
 
 <p align="center">
-	<a href="https://github.com/catppuccin/kotlin/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/kotlin?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/kotlin/issues"><img src="https://img.shields.io/github/issues/catppuccin/kotlin?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/kotlin/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/kotlin?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
-  <a href="https://search.maven.org/artifact/com.catppuccin/catppuccin-kotlin"><img src="https://img.shields.io/maven-central/v/com.catppuccin/catppuccin-kotlin?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+	<a href="https://github.com/d1snin/catppuccin-kotlin/stargazers"><img src="https://img.shields.io/github/stars/d1snin/catppuccin-kotlin?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://github.com/d1snin/catppuccin-kotlin/issues"><img src="https://img.shields.io/github/issues/d1snin/catppuccin-kotlin?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+	<a href="https://github.com/d1snin/catppuccin-kotlin/contributors"><img src="https://img.shields.io/github/contributors/d1snin/catppuccin-kotlin?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+  <br>
+  <br>
+  <a href="https://github.com/d1snin/catppuccin-kotlin"><img src="https://maven.d1s.dev/api/badge/latest/releases/dev/d1s/ktor-static-authentication?color=40c14a&name=maven.d1s.dev&prefix=v"></a>
 </p>
 
 ## Installation
 
 ```gradle
 repositories {
-    mavenCentral()
+    maven(url = "https://maven.d1s.dev/releases")
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/com.catppuccin/catppuccin-kotlin
-    implementation("com.catppuccin:catppuccin-kotlin:1.0.0")
+    implementation("com.catppuccin:catppuccin-kotlin:1.0.1")
 }
 ```
 
@@ -57,7 +58,7 @@ allPaletteColors
 
 ## Contributing
 
-If you are looking to contribute, please read through our 
+If you are looking to contribute, please read through our
 [CONTRIBUTING.md](https://github.com/catppuccin/.github/blob/main/CONTRIBUTING.md) first!
 
 ### Development
@@ -82,7 +83,7 @@ To run tests:
 
 ## CI/CD
 
-This project has a GitHub actions workflow to automatically build binaries and deploy to Maven Central repository. 
+This project has a GitHub actions workflow to automatically build binaries and deploy to Maven Central repository.
 The workflows are stored at [.github/workflows](.github/workflows)
 
 ## Thanks to
