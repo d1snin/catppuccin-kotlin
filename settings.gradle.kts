@@ -32,8 +32,6 @@ pluginManagement {
 
         val versionsPluginVersion: String by settings
 
-        val deployerVersion: String by settings
-
         kotlin("multiplatform") version kotlinVersion
 
         id("org.jetbrains.dokka") version dokkaVersion
