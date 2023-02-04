@@ -41,7 +41,5 @@ pluginManagement {
         id("org.jetbrains.kotlinx.kover") version koverVersion
 
         id("com.github.ben-manes.versions") version versionsPluginVersion
-
-        id("io.deepmedia.tools.deployer") version deployerVersion
     }
 }
