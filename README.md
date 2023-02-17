@@ -11,7 +11,7 @@
 	<a href="https://github.com/d1snin/catppuccin-kotlin/contributors"><img src="https://img.shields.io/github/contributors/d1snin/catppuccin-kotlin?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
   <br>
   <br>
-  <a href="https://github.com/d1snin/catppuccin-kotlin"><img src="https://maven.d1s.dev/api/badge/latest/releases/dev/d1s/ktor-static-authentication?color=40c14a&name=maven.d1s.dev&prefix=v"></a>
+  <a href="https://github.com/d1snin/catppuccin-kotlin"><img src="https://maven.d1s.dev/api/badge/latest/releases/com/catppuccin/catppuccin-kotlin?color=40c14a&name=maven.d1s.dev&prefix=v"></a>
 </p>
 
 ## Installation
