@@ -1,9 +1,9 @@
 name: Publish Dokka documentation
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types:
+      - published
 
 jobs:
   publish_docs:
