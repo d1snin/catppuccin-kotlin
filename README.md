@@ -64,7 +64,7 @@ Currently supported targets are JVM and JS. Native targets are coming soon! Let 
 ## Contributing
 
 If you are looking to contribute, please read through our
-[CONTRIBUTING.md](https://github.com/catppuccin/.github/blob/main/CONTRIBUTING.md) first!
+[CONTRIBUTING.md][contribution_guide] first!
 
 ### Development
 
@@ -89,11 +89,11 @@ To run tests:
 ## CI/CD
 
 This project has a GitHub actions workflow to automatically build binaries and deploy to Maven Central repository.
-The workflows are stored at [.github/workflows](.github/workflows)
+The workflows are stored at [.github/workflows][workflows]
 
 ## Thanks to
 
-- [Mikhail Titov](https://github.com/d1snin)
+- [Mikhail Titov][d1snin]
 
 &nbsp;
 
@@ -108,3 +108,7 @@ The workflows are stored at [.github/workflows](.github/workflows)
 <p align="center">
 	<a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
 </p>
+
+[contribution_guide]: https://github.com/d1snin/ktor-ws-events/blob/main/CONTRIBUTING.md
+[workflows]: https://github.com/d1snin/ktor-ws-events/blob/main/.github/workflows
+[d1snin]: https://github.com/d1snin
