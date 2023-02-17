@@ -22,7 +22,9 @@ repositories {
 }
 
 dependencies {
-    implementation("com.catppuccin:catppuccin-kotlin:1.0.1")
+    val catppuccinKotlinVersion: String by project
+
+    implementation("com.catppuccin:catppuccin-kotlin:$catppuccinKotlinVersion")
 }
 ```
 
