@@ -61,8 +61,6 @@ kotlin {
         compilations.all {
             kotlinOptions.jvmTarget = JavaVersion.VERSION_17.majorVersion
         }
-
-        withJava()
     }
 
     js {
@@ -85,10 +83,6 @@ kotlin {
                 implementation(kotlin("test-junit"))
             }
         }
-
-        val jvmMain by getting
-
-        val jsMain by getting
     }
 
     explicitApi()
