@@ -64,14 +64,7 @@ kotlin {
     }
 
     js {
-        browser {
-            testTask {
-                useKarma {
-                    useFirefox()
-                }
-            }
-        }
-
+        browser()
         nodejs()
     }
 
